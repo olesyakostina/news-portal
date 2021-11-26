@@ -8,7 +8,7 @@
                 text-decoration: none;
                 font-size: 60px;
                 color: #004FEC;  
-                font-size: 60px;
+                font-size: 50px;
             }
             margin-bottom: 60px;
         }
@@ -33,10 +33,13 @@
         }
     }
     image{
-        width: 50%;
+        width: 50%;        
         img{
             width: 100%;
-            min-width:540px ;
-            height: 340px;        }
+            min-width:500px ;
+            height: 340px;
+            border-radius: 10px; 
+            
+        }
     }
 }

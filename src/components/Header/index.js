@@ -9,7 +9,7 @@ import {routeMain as routeContacts} from 'pages/Contacts';
 const Header =()=>{
     return (
         <header className='mainHeader'>
-           <div className='title'>Новостник</div>
+           <NavLink to={routeMainPage()} className='title'>Новостник</NavLink>
            <nav>
                <NavLink to={routeMainPage()} activeClassName={'linkActive'}>Главная</NavLink>
                <NavLink to={routeNewsListPages()} activeClassName={'linkActive'}>Новости</NavLink>
