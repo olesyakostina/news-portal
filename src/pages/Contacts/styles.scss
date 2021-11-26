@@ -1,0 +1,42 @@
+.contactsPage{
+    display: flex;
+    justify-content: space-between;
+    .info{
+        width: 50%;
+        .phone{
+            a{
+                text-decoration: none;
+                font-size: 60px;
+                color: #004FEC;  
+                font-size: 60px;
+            }
+            margin-bottom: 60px;
+        }
+        .name{
+            padding-left: 23px;
+            border-left: 1px solid  #004FEC;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        .mail{
+            a{
+                text-decoration: none;
+                color:#333D51;
+                font-size: 20px;
+            }
+            margin-bottom: 25px;
+        }
+        .position{
+            color: rgba(51,61,81,0.5);
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+    image{
+        width: 50%;
+        img{
+            width: 100%;
+            min-width:540px ;
+            height: 340px;        }
+    }
+}
