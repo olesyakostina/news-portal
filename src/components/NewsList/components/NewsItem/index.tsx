@@ -4,14 +4,19 @@ import { NavLink } from "react-router-dom";
 import DateView from "components/DateView";
 import { routeMain as routeNewsDetail } from 'pages/NewsDetail';
 
-const NewsItem =(props)=>(
-    <NavLink className='newsItem' to = {routeNewsDetail(props.item._id)}>
+import { INewsDetail } from 'types/INewsDetail';
+
+interface INewsItemParams{
+    item:INewsDetail
+}
+const NewsItem: React.FC<INewsItemParams> =({item})=>(
+    <NavLink className='newsItem' to = {routeNewsDetail(item._id)}>
         <div className='title'>
-            {props.item.title}
+            {item.title}
         </div>
         <div className='bottomWrapper'>
-            <p className ='source'>{props.item.clean_url}</p>
-            <DateView value={props.item.published_date}/>
+            <p className ='source'>{item.clean_url}</p>
+            <DateView value={item.published_date}/>
           
 
         </div>

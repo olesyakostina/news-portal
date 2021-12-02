@@ -5,9 +5,10 @@ import PageTitle from "components/PageTitle";
 import NewsList from "components/NewsList";
 import getNews from "services/getNews";
 
+import { INewsDetail } from "types/INewsDetail";
 
 const MainPage =()=>{
-    const [newsList, setNewsList] = useState([])
+    const [newsList, setNewsList] = useState<INewsDetail[]>([])
 
     useEffect(()=>{
         getNews().then(response => {
