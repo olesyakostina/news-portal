@@ -7,6 +7,7 @@ import { INewsDetail } from "types/INewsDetail";
 interface INewsListParams{
     list:INewsDetail[]
 }
+
 const NewsList:React.FC<INewsListParams> =({list})=>(
     <div className='newsList'>
         {list.map((news:INewsDetail)=>(

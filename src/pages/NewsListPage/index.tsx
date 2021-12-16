@@ -7,15 +7,17 @@ import getNews from "services/getNews";
 import { INewsDetail } from "types/INewsDetail";
 
 import './styles.scss'
+import { useDispatch ,useSelector} from "react-redux";
+import { loadNews } from "store/news/actions";
+import { selectList } from "store/news/selectors";
 
 const NewsListPages =()=>{
-    const [newsList, setNewsList] = useState<INewsDetail[]>([])
-
+    const dispatch = useDispatch()
+   const  newsList = useSelector(selectList)
+    
     useEffect(()=>{
-        getNews().then(response => {
-            setNewsList(response.data.articles)
-        })
-    },[])
+        dispatch(loadNews())
+    },[dispatch])
 
     return(
         <section className='newsListPages'>
